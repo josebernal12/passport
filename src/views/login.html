@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css">
+
+ 
+
+</head>
+
+<body>
+  <div class="contacto">
+    <h1>Login</h1>
+   
+     <div class="formulario">
+   
+       <form action="/login" method="post">
+         <label class="label">E-mail</label>
+         <input class="input" name='username' placeholder="email" class="form-control" type="email" required>
+         <label class="label">Password</label>
+         <input class='input' name="password"  placeholder="Password" class="form-control" type="password" required>
+   
+         <input  class="boton" type="submit" value="Singup">
+     </div>
+   
+     </form>
+   
+     <input class="button" class="btn btn-success my-3" onclick="goSignup()" type="submit" value="Signup">
+   
+       
+     </div>
+  
+<script>
+    function redireccionar(pagina) {
+      location.href = pagina;
+    }
+
+    function goSignup() {
+      redireccionar('/login  ');
+    }
+</script>
+
+
+
+</body>
+
+</html>
