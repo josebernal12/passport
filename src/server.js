@@ -6,7 +6,7 @@ const session = require('express-session');
 const passport = require('passport');
 const controllersdb = require('./database/database')
 const port = process.env.PORT || 8080;
-
+const argv = require('./config/yargs')
 
 const app = express();
 require('./passport/passport');
@@ -50,11 +50,11 @@ controllersdb.conectarDB(process.env.URL, (err) => {
   console.log("BASE DE DATOS CONECTADA");
 })
 
-app.listen(port, (error) => {
+app.listen(argv.p, (error) => {
   if (error) {
       console.log(error)
   } else {
-      console.log(`Servidor escuchando puerto: ${port}`)
+      console.log(`Servidor escuchando puerto: ${argv.p}`)
   }
 
 });
